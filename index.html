@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>mynotes</title>
+</head>
+
+<body>
+    <header class="container-fluid bg-primary text-light">
+        <h1>My Notes</h1>
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-5" id="make-note">
+                <form onsubmit="app.notesController.postNote(event)">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" name='title' class="form-control" id="title" placeholder="Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="noteBody">Note</label>
+                        <textarea class="form-control" name="noteBody" id="noteBody" rows="4"></textarea>
+                    </div>
+                    <button class="btn btn-primary form-control" type="submit">Create Note</button>
+                </form>
+            </div>
+            <div class="col-7">
+                <div class="row d-flex flex-column" id="notes-area">
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid bg-primary text-center text-light">
+        Made by Codeworks
+    </footer>
+
+
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
