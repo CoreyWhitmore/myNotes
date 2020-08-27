@@ -9,7 +9,6 @@ export default class Note {
 
     get Template() {
         return `
-
         <div class="card w-auto m-2" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">${this.title}</h5>
